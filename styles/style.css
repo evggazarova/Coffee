@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.display-large {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+
+.display-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+
+.title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+
+.subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+
+.price-product {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 20px;
+}
+
+
+.button-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+
+
+
+:root {
+
+  --primary-color: #415167;
+  --accent-color: #C7A17A;
+  --dark-gray: #151D28;
+  --light-gray: #EDF0F5;
+  --cream: #F9F5E8;
+  --white: #f9fafb;
+
+
+  --btn-primary-bg: var(--color-accent);
+  --btn-primary-text: var(--white);
+  --btn--hover-bg: var(--color-cream);
+
+
+  --btn-outline-bg: var(--white);
+  --btn-outline-text: var(--color-dark);
+  --btn-outline-hover-bg: var(--color-cream);
+}
+
+
+
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 100px;
+  margin-bottom: 2.5rem;
+  align-self: center;
+}
+
+
+.hero-header {
+  display: flex;
+  height: 100vh;
+  position: relative; 
+}
+
+
+.hero-header__left {
+  width: 500px;
+  background: var(--white);
+  padding: 4rem;
+}
+
+.hero-header__logo {
+  margin-left: 9rem; 
+}
+
+
+
+.hero-header__title {
+  position: absolute;
+  bottom: 50px;
+  left: 200px; 
+  
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0rem 0.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  z-index: 10;
+  
+}
+
+
+.hero-header__title--highlight {
+  display: inline-block;
+  background-color: var(--accent-color); 
+  color: var(--white) ; 
+  padding: 0.5rem 0.5rem; 
+  margin: 0.3rem 0; 
+}
+
+
+
+.hero-header__center {
+  flex: 1;
+}
+
+.hero-header__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.hero-header__nav {
+  width: 250px;
+  background-color: var(--primary-color) ;
+  padding: 12rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.nav__item {
+  width: 100%;
+}
+
+.nav__link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Nunito', sans-serif; 
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--white); 
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.nav__link:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+.features {
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+}
+
+.features__list {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.feature {
+  flex: 1 1 200px; 
+  max-width: 200px; 
+  padding: 11rem 0rem; 
+  background: var(--white);
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+
+.feature__icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--dark-gray);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.feature__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--dark-gray);
+}
+
+
+
+
+
+
+
+.products {
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  position: relative;
+  min-height: 100vh; 
+  overflow: hidden;
+}
+
+.products__left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px; 
+  height: 100%; 
+  background-color: var(--primary-color);
+  z-index: 1; 
+}
+
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 2; 
+}
+
+
+.product {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;    
+  gap: 1.5rem;         
+  align-items: flex-start; 
+}
+
+
+.product__content {
+  flex: 1;               
+  display: flex;
+  flex-direction: column;
+}
+
+
+.product__image {
+  flex: 0 0 350px;     
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0;    
+}
+
+.product__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  color: var(--primary-color);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.product__price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+.product__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  margin-top: auto; 
+}
+
+.product__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--dark-gray);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.giftset {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background-color: var(--white);
+  padding: 3rem 2rem;
+  width: 100%;
+  border-radius: 12px; 
+}
+
+
+.giftset_contaneir {
+  display: flex;
+  flex-direction: row;
+  margin: 0rem 20rem;
+  gap: 40px;
+  width: 100%;
+}
+
+
+.giftset__image {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.giftset__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+
+.giftset__price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--accent-color); 
+  margin: 0;
+}
+
+
+.giftset__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--primary-color);
+  margin: 0.5rem 0 1rem 0;
+}
+
+
+.giftset__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; 
+  color: var(--text-dark); 
+  margin: 0 0 1.5rem 0;
+}
+
+
+.giftset__specs {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem; 
+  margin: 1.5rem 0;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
+.spec {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--text-dark); 
+}
+
+
+.spec__icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; 
+}
+
+
+
+
+
+
+
+
+.combo {
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+.combo__left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;  
+  height: 100%;
+  background-color: var(--white); 
+  z-index: 1;
+}
+
+
+.combo__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%; 
+  height: 100%;
+  background-color: var(--primary-color); 
+  z-index: 1;
+}
+
+
+.combo__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2; 
+  justify-content: center; 
+}
+
+/* Карточка комбо */
+.combo__product {
+  padding: 1rem;
+  background: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  flex: 1 1 300px; 
+  max-width: 500px; 
+}
+
+/* Фото в комбо */
+.combo__image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.combo__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.combo__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--dark-gray);
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+
+.combo__price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+
+.combo__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  margin-top: auto; 
+  justify-content: flex-start;
+}
+
+
+.combo__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--dark-gray);
+  margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  margin-top: 10px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+}
+
+.button--primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.button--outline {
+  margin-top: 10px;
+  background: transparent;
+  color: var(--btn-outline);
+  border: 2px solid var(--btn-outline);
+}
+
+.button--outline:hover {
+  background-color: var(--btn-outline-hover);
+}
+
+.button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-white);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer__text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* ----------- Mobile (до 768px) ----------- */
+@media (max-width: 768px) {
+  /* Общее */
+  .section-title {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 60px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Hero Header */
+  .hero-header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .hero-header__left,
+  .hero-header__nav {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .hero-header__logo {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-header__title {
+    position: static;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.2;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .hero-header__image {
+    height: auto;
+    max-height: 40vh;
+  }
+
+  /* Features */
+  .features__list {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .feature {
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  /* Products */
+  .products__left {
+    display: none; /* скрываем левую колонку на мобилке */
+  }
+
+  .products__list {
+    grid-template-columns: 1fr; /* одна колонка */
+    padding: 0 1rem;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product__image {
+    width: 100%;
+    height: 300px;
+    flex: 0 0 auto;
+  }
+
+  .product__content {
+    align-items: center;
+  }
+
+  .product__title,
+  .product__desc {
+    text-align: center;
+  }
+
+  /* Giftset — ГЛАВНОЕ: исправление контейнера + центрирование */
+  .giftset {
+    padding: 2rem 1rem;
+    align-items: center; /* ← центрируем ВСЁ внутри giftset */
+  }
+
+  .giftset_contaneir { /* ← опечатка всё ещё здесь! */
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0; /* убрать margin: 0rem 20rem — оно ломает мобилку */
+  }
+
+  .giftset__image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .giftset__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .giftset__specs {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .spec {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Combo */
+  .combo__left,
+  .combo__right {
+    display: none;
+  }
+
+  .combo__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .combo__product {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .combo__image {
+    height: 300px;
+  }
+
+  /* Кнопки */
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .giftset__actions,
+  .product__actions,
+  .combo__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button + .button {
+    margin-top: 0.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  .hero-header__title {
+    font-size: 32px;
+  }
+
+  .display-large {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .display-medium {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle,
+  .price-product,
+  .product__price {
+    font-size: 18px;
+  }
+
+  .body,
+  .description,
+  .button-text {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .section-title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 80px;
+  }
+
+  
+  .hero-header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .hero-header__left,
+  .hero-header__nav {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-header__logo {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-header__title {
+    position: static;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.15;
+    padding: 0.75rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  
+  .features__list {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .feature {
+    max-width: 100%;
+    padding: 2.5rem 1rem;
+  }
+
+  .products__left {
+    display: none; 
+  }
+
+  .products__list {
+    grid-template-columns: 1fr; 
+    padding: 0 1.5rem;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product__image {
+    width: 100%;
+    height: 60%;
+  }
+
+  
+  .giftset {
+    padding: 2.5rem 1.5rem;
+    align-items: center;
+  }
+
+  .giftset_contaneir { 
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+  }
+
+  .giftset__image {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .giftset__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .giftset__specs {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  
+  .combo__left,
+  .combo__right {
+    display: none;
+  }
+
+  .combo__list {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .combo__image {
+    height: 350px;
+  }
+
+ 
+  .giftset__actions,
+  .product__actions,
+  .combo__actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .button {
+    width: auto;
+    min-width: 140px;
+  }
+}

@@ -5,159 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин Revo</title>
     <link rel="icon" href="assets/Icons/mag.png" type="Icon">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <img src="assets/LOGO.png" alt="revo">
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#assor">Ассортимент</a></li>
-                <li><a href="#cart">Корзина</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="hero-header">
+        <div class="hero-header__left">
+            <img src="assets/LOGO.png" alt="Revo Coffee" class="hero-header__logo">
+        </div>
+
+        <div class="hero-header__name">
+            <h1 class="hero-header__title">YOUR<br><span class="hero-header__title--highlight">PERSONALIZED</span><br>COFFEE</h1>
+        </div>
+
+
+        <div class="hero-header__center">
+            <img src="assets/Photo/banner.png" alt="Coffee setup" class="hero-header__image">
+        </div>
+
+
+    <nav class="hero-header__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+            <li class="nav__item"><a href="#assor" class="nav__link">Кофе</a></li>
+            <li class="nav__item"><a href="#combo" class="nav__link">Комбо</a></li>
+            <li class="nav__item"><a href="#gift" class="nav__link">Подарочный сет</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+    </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Сделай свое персональное кофе!</h1>
-            <img src="assets/Photo/banner" alt="banner">
-        </section>
 
-        <section id="about">
-            <h2>Кофе для тебя</h2>
-            <div>
-            <article>
-             <img src="assets/Icons/mag.png" alt="Mag">
-             <h3>Рядом с&nbsp;домом</h3>   
-            <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
-            </article>
+        <section id="about" class="features">
+            <h2 class="section-title">Кофе для тебя</h2>
 
-            <article>
-             <img src="assets/Icons/tabl.png" alt="table">
-             <h3>Всегда открыты</h3>   
-            <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
-            </article>
+            <div class="features__list">
+                <article class="feature">
+                    <img src="assets/Icons/mag.png" alt="Рядом с домом" class="feature__icon">
+                    <h3 class="feature__title">Рядом с&nbsp;домом</h3>
+                    <p class="feature__desc">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
+                </article>
 
-            <article>
-             <img src="assets/Icons/pot.png" alt="pot">
-             <h3>Чистое</h3>   
-            <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
-            </article>
+                <article class="feature">
+                    <img src="assets/Icons/tabl.png" alt="Всегда открыты" class="feature__icon">
+                    <h3 class="feature__title">Всегда открыты</h3>
+                    <p class="feature__desc">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
+                </article>
 
-            <article>
-             <img src="assets/Icons/avt.png" alt="Autonmat">
-             <h3>Оборудование</h3>   
-            <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
-            </article>
+                <article class="feature">
+                    <img src="assets/Icons/pot.png" alt="Чистое" class="feature__icon">
+                    <h3 class="feature__title">Чистое</h3>
+                    <p class="feature__desc">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
+                </article>
+
+                <article class="feature">
+                    <img src="assets/Icons/avt.png" alt="Оборудование" class="feature__icon">
+                    <h3 class="feature__title">Оборудование</h3>
+                    <p class="feature__desc">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса.</p>
+                </article>
             </div>
         </section>
 
 
 
-        <section id="assor">
-            <h2>Выбирай по душе!</h2>
-            <div>
-            <article>
-             <img src="assets/Photo/white_bluecof.png" alt="Mag">
-             <h3>Каждый день</h3>   
-             <p><strong>99 000</strong></p>
-            <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Прежде всего, синтетическое тестирование</p>
-            </article>
+        <section id="assor" class="products">
+            <h2 class="section-title">Выбирай по душе!</h2>
+            <div class="products__left"></div>
+            <div class="products__list">
+                <article class="product">
+                    <img src="assets/Photo/white_bluecof.png" alt="Каждый день" class="product__image">
+                    
+                    <div class="product__content">
+                        <h3 class="product__title">Каждый день</h3>
+                        <p class="product__price"><strong>99 000</strong></p>
+                        <p class="product__desc">Прежде всего, синтетическое тестирование</p>
+                        <div class="product__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                
+                </article>
 
-            <article>
-             <img src="assets/Photo/white_browncof.png" alt="table">
-             <h3>Особое</h3>   
-             <p><strong>89 000</strong></p>
-             <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Не&nbsp;следует, однако, забывать, что </p>
-            </article>
+                <article class="product">
+                    <img src="assets/Photo/white_browncof.png" alt="Особый" class="product__image">
+                    
+                    
+                    <div class="product__content">
+                        <h3 class="product__title">Особый</h3>
+                        <p class="product__price"><strong>89 000</strong></p>
+                        <p class="product__desc">Не&nbsp;следует, однако, забывать, что </p>
+                        <div class="product__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                    
+                </article>
 
-            <article>
-             <img src="assets/Photo/orangcof.png" alt="orangecoffe">
-             <h3>Оригинальное</h3>   
-             <p><strong>129 000</strong></p>
-             <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Не&nbsp;следует, несмотря, забывать, что </p>
-            </article>
+                <article class="product">
+                    <img src="assets/Photo/orangcof.png" alt="Оригинальный" class="product__image">
+                    <div class="product__content">
+                        <h3 class="product__title">Оригинальный</h3>
+                        <p class="product__price"><strong>129 000</strong></p>
+                        <p class="product__desc">Не&nbsp;следует, несмотря, забывать, что </p>
+                        <div class="product__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                </article>
 
-            <article>
-             <img src="assets/Photo/white_yellowcof.png" alt="pot">
-             <h3>Утреннее кофе</h3>   
-             <p><strong>129 000</strong></p>
-            <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Но&nbsp;предприниматели в&nbsp;сети интернет</p>
-            </article>
-
-        
+                <article class="product">
+                    <img src="assets/Photo/white_yellowcof.png" alt="Утренний кофе" class="product__image">
+                    
+                    <div class="product__content">
+                        <h3 class="product__title">Утренний кофе</h3>
+                        <p class="product__price"><strong>129 000</strong></p>
+                        <p class="product__desc">Но&nbsp;предприниматели в&nbsp;сети интернет</p>
+                        <div class="product__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section id=>
-            <h2>Подарок для друга!</h2>
-            <img src="assets/Photo/pack.png" alt="grains">
-            <h3>Подарочный набор</h3>
-             <p><strong>285 000</strong></p>
-            <div class="feature">
-            <img src="assets/Icons/grains.png" alt="Тип зерна">
-            <span>Противоположная точка<br>подразумевает</span>
+        <section id="gift" class="giftset">
+            
+            <h2 class="section-title">Подарок для друга!</h2>
+            <div class="giftset_contaneir">
+                <img src="assets/Photo/pack.png" alt="Подарочный набор" class="giftset__image">
+                <div class="giftset__content">
+                    <h3 class="giftset__title">Подарочный набор</h3>
+                    <p class="giftset__price"><strong>285 000</strong></p>
+                    <div class="giftset__specs">
+                        <div class="spec">
+                            <img src="assets/Icons/grains.png" alt="Тип зерна" class="spec__icon">
+                            <span class="spec__text">Противоположная точка<br>подразумевает</span>
+                        </div>
+                        <div class="spec">
+                            <img src="assets/Icons/mountain.png" alt="Высота произрастания" class="spec__icon">
+                            <span class="spec__text">стремящиеся вытеснить традиционное производство<br>700 - 800m</span>
+                        </div>
+                    </div>
+                    
+                    <p class="giftset__desc">Но&nbsp;предприниматели в&nbsp;сети интернет</p>
+                    <div class="giftset__actions">
+                        <button class="button button--primary">Купить</button>
+                        <button class="button button--outline">Подробнее</button>
+                    </div>
+                </div>
             </div>
-
-            <div class="feature">
-            <img src="assets/Icons/mountain.png" alt="Высота произрастания">
-            <span>стремящиеся вытеснить традиционное производство<br>700 - 800m</span>
-            </div>
-            <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Но&nbsp;предприниматели в&nbsp;сети интернет</p>
         </section>
 
 
-        <section id=>
-            <h2>Комбо</h2>
-            <div>
-            <article>
-             <img src="assets/Photo/bluecof.png" alt="bluecof">
-             <h3>Каждый день комбо</h3>   
-             <p><strong>299 000</strong></p>
-            <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Прежде всего, синтетическое тестирование</p>
-            </article>
+        <section id="combo" class="combo">
+            <h2 class="section-title">Комбо</h2>
+            <div class="combo__right"></div>
+            <div class="combo__left"></div>
+            <div class="combo__list">
+                <article class="combo__product">
+                    <img src="assets/Photo/bluecof.png" alt="Каждый день комбо" class="combo__image">
+                    <div class="combo__content">
+                        <h3 class="combo__title">Каждый день комбо</h3>
+                        <p class="combo__price"><strong>299 000</strong></p>
+                    
+                        <p class="combo__desc">Прежде всего, синтетическое тестирование</p>
+                        <div class="combo__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                </article>
 
-            <article>
-             <img src="assets/Photo/browncof.png" alt="browncof">
-             <h3>Особое комбо</h3>   
-             <p><strong>289 000</strong></p>
-             <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Не&nbsp;следует, однако, забывать, что </p>
-            </article>
+                <article class="combo__product">
+                    <img src="assets/Photo/browncof.png" alt="Особое комбо" class="combo__image">
+                    <div class="combo__content">
+                        <h3 class="combo__title">Особое комбо</h3>
+                        <p class="combo__price"><strong>289 000</strong></p>
+                        
+                        <p class="combo__desc">Не&nbsp;следует, однако, забывать, что </p>
+                        <div class="combo__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                </article>
 
-            <article>
-             <img src="assets/Photo/redcof.png" alt="redcof">
-             <h3>Медовое комбо</h3>   
-             <p><strong>229 000</strong></p>
-            <button>Подробнее</button>
-            <button>Купить</button>
-            <p>Но&nbsp;предприниматели в&nbsp;сети интернет</p>
-            </article>
-
-        
+                <article class="combo__product">
+                    <img src="assets/Photo/redcof.png" alt="Медовое комбо" class="combo__image">
+                    <div class="combo__content">
+                        <h3 class="combo__title">Медовое комбо</h3>
+                        <p class="combo__price"><strong>229 000</strong></p>
+                        
+                        <p class="combo__desc">Но&nbsp;предприниматели в&nbsp;сети интернет</p>
+                        <div class="combo__actions">
+                            <button class="button button--primary">Купить</button>
+                            <button class="button button--outline">Подробнее</button>
+                        </div>
+                    </div>
+                </article>
             </div>
-
         </section>
     </main>
 
-    <footer>
-        <p>Revo Coffee Vi&#7879;t&nbsp;Nam&nbsp;&mdash; 2018</p>
+    <footer class="footer">
+        <p class="footer__text">Revo Coffee Việt Nam&nbsp;&mdash; 2018</p>
     </footer>
 </body>
 </html>

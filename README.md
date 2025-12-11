@@ -6,7 +6,7 @@ HTML-верстка одностраничного сайта кофейни *re
 - HTML
 
 ## Демо
-[Посмотреть на GitHub Pages](https://evggazarova.github.io/Task-1/)
+[Посмотреть на GitHub Pages](https://github.com/evggazarova/Coffee)
 =======
 # Task-1
 >>>>>>> c5ed683406dbe5a435ff0753d510cbbd98d09d5f
