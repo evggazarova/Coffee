@@ -660,7 +660,89 @@ a {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
+.menu-toggle {
+ display: none;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 44px;
+ height: 44px;
+ background: var(--primary-color);
+ border: none;
+ padding: 12px 10px;
+ cursor: pointer;
+ z-index: 1001;
+}
+.menu-toggle__line {
+ width: 100%;
+ height: 3px;
+ background: white;
+ border-radius: 2px;
+ transition: transform 0.3s ease, opacity 0.3s ease;;
+}
+/* Состояние открытого меню */
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+ transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+ opacity: 0;
+}
 
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+ transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.scroll-top {
+ position: fixed;
+ bottom: 30px;
+ right: 30px;
+ width: 56px;
+ height: 56px;
+ background: var(--primary-color);
+ color: white;;
+ border: none;
+ border-radius: 50%;
+ font-size: 24px;
+ cursor: pointer;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.3s ease;
+ z-index: 999;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.scroll-top.visible {
+ opacity: 1;
+ visibility: visible;
+}
+.scroll-top:hover {
+ background: var(--primary-color);
+ transform: scale(1.1);
+}
+.scroll-top:active {
+ transform: scale(0.95);
+}
+
+.nav-overlay {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0,0,0,0.5);
+ z-index: 999;
+ }
+
+ .nav-overlay.active {
+ display: block;
+ }
+
+ /* Увеличиваем touch-зоны */
+ .btn {
+ min-width: 120px;
+ }
 
 .footer {
   text-align: center;
@@ -686,7 +768,7 @@ html {
 
 
 
-/* ----------- Mobile (до 768px) ----------- */
+
 @media (max-width: 768px) {
   /* Общее */
   .section-title {
@@ -695,20 +777,44 @@ html {
     margin-top: 60px;
     margin-bottom: 1.5rem;
   }
-
+ 
+  .scroll-top {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20p;
+    font-size: 22px;
+  }
   /* Hero Header */
   .hero-header {
+
     flex-direction: column;
     height: auto;
     padding-bottom: 4rem;
   }
 
-  .hero-header__left,
-  .hero-header__nav {
+  .hero-header__left{
     width: 100%;
     padding: 2rem;
   }
+  
+.hero-header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--primary-color);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    padding: 80px 30px 30px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
 
+  .hero-header__nav.active {
+    right: 0;
+  }
   .hero-header__logo {
     margin-left: 0;
     text-align: center;
@@ -727,6 +833,28 @@ html {
     height: auto;
     max-height: 40vh;
   }
+  .menu-toggle {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+  }
+
+  /* Основная навигация (скрыта по умолчанию) */
+  .nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  padding: 80px 30px 30px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  }
 
   /* Features */
   .features__list {
@@ -740,13 +868,13 @@ html {
     padding: 2rem 1rem;
   }
 
-  /* Products */
+
   .products__left {
-    display: none; /* скрываем левую колонку на мобилке */
+    display: none; 
   }
 
   .products__list {
-    grid-template-columns: 1fr; /* одна колонка */
+    grid-template-columns: 1fr; 
     padding: 0 1rem;
   }
 
@@ -771,17 +899,17 @@ html {
     text-align: center;
   }
 
-  /* Giftset — ГЛАВНОЕ: исправление контейнера + центрирование */
+
   .giftset {
     padding: 2rem 1rem;
-    align-items: center; /* ← центрируем ВСЁ внутри giftset */
+    align-items: center; 
   }
 
-  .giftset_contaneir { /* ← опечатка всё ещё здесь! */
+  .giftset_contaneir { 
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 0; /* убрать margin: 0rem 20rem — оно ломает мобилку */
+    margin: 0; 
   }
 
   .giftset__image {

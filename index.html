@@ -7,6 +7,8 @@
     <link rel="icon" href="assets/Icons/mag.png" type="Icon">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
+
 <body>
     <header class="hero-header">
         <div class="hero-header__left">
@@ -22,17 +24,22 @@
             <img src="assets/Photo/banner.png" alt="Coffee setup" class="hero-header__image">
         </div>
 
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+        </button>
 
-    <nav class="hero-header__nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
-            <li class="nav__item"><a href="#assor" class="nav__link">Кофе</a></li>
-            <li class="nav__item"><a href="#combo" class="nav__link">Комбо</a></li>
-            <li class="nav__item"><a href="#gift" class="nav__link">Подарочный сет</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
-        </ul>
-    </nav>
+        <nav class="hero-header__nav" id="mainNav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#assor" class="nav__link">Кофе</a></li>
+                <li class="nav__item"><a href="#combo" class="nav__link">Комбо</a></li>
+                <li class="nav__item"><a href="#gift" class="nav__link">Подарочный сет</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -210,10 +217,16 @@
                 </article>
             </div>
         </section>
+        
+
     </main>
 
     <footer class="footer">
         <p class="footer__text">Revo Coffee Việt Nam&nbsp;&mdash; 2018</p>
     </footer>
+    <script src="scripts/menu.js"></script>
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+ ↑
+</button>
 </body>
 </html>
